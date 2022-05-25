@@ -18,14 +18,19 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte">
-    {{ page.content }}
-  </div>
-</div>
+{% if page.title == "Landing Page" %}
+   {% render 'landing-page' %}
+   {% else %}
+    <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+        <h1 class="main-page-title page-title h0">
+          {{ page.title | escape }}
+        </h1>
+        <div class="rte">
+          {{ page.content }}
+        </div>
+    </div> 
+{% endif %}
+
 
 {% schema %}
 {
