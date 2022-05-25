@@ -7,6 +7,9 @@
                         <h1 class="text-5xl sm:text-7xl font-bold">Visionary intelligence</h1>
                         <p class="sm:w-3/4 lg:w-2/4 xl:w-96 mx-auto text-lg sm:text-xl text-gray-600">Free HTML Single Product eCommerce langing page template</p>
                     </div>
+                    {%- if section.settings.image != blank -%}
+                      
+                    {%- endif -%}
                     <a href="#0" class="px-12 py-4 bg-blue-800 hover:bg-blue-900 transition duration-300 ease-in-out shadow hover:shadow-lg transform hover:scale-110 text-white font-semibold text-lg rounded-full inline-block">Buy now</a>
                 </div>
                 <!-- <img class="mx-auto xl:max-w-screen-lg mb-28" src="assets/img/hero-drone.png" alt="Drone"> -->
@@ -195,12 +198,12 @@
 
 {% schema %}
   {
-      "name": "Product Landing Page",
+      "name": "t:sections.product-landing-page.name",
       "settings": [
         {
-          "id" : "product_landing_page",
+          "id" : "image",
           "type" : "image_picker",
-          "label" : "Add landing page"
+          "label" : "Add Hero Image"
 
         }  
       ],
