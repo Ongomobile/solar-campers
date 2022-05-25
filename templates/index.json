@@ -217,6 +217,7 @@
     "1653453453eb89cb53": {
       "type": "product-landing-page",
       "settings": {
+        "product_landing_page": "shopify:\/\/shop_images\/pexels-andrea-piacquadio-3777017.jpg"
       }
     }
   },
