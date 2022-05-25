@@ -111,6 +111,7 @@
         "default": 100
       },
       {
+        
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__2.content"
       },
