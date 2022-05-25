@@ -1,9 +1,12 @@
 {%-liquid
   assign hero_img_class = "mx-auto xl:max-w-screen-lg mb-28"
-  assign hero_img_height = 1500
-  assign hero_img_width = 1007
-  assign second_img_height = 1590
-  assign second_img_width = 1182
+  assign hero_img_width = 1500
+  assign hero_img_height = 1007
+  assign second_img_width = 1590
+  assign second_img_height = 1182
+  assign third_img_width = 863
+  assign third_img_height = 680
+ 
 -%}
 <div>
   <section class="bg-gray-200 py-20 lg:py-28"><!-- Start Hero Block -->
@@ -69,12 +72,8 @@
                   </span>
               </button>
                {%- if section.settings.image_2 != blank -%}
-              
-                {{ section.settings.image_2 | image_url: width: second_img_width, height: second_img_height | image_tag: loading: 'lazy', alt: section.settings.image.alt | escape }}
-              
+                {{ section.settings.image_2 | image_url: width: second_img_width, height: second_img_height | image_tag: loading: 'lazy', alt: section.settings.image_2.alt | escape }}
               {%- endif -%}
-              <!-- <img src="https://images.unsplash.com/photo-1511204579483-e5c2b1d69acd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1871&q=80" alt=""> -->
-
           </div>
       </div>
   </section><!-- End Second Block -->
@@ -94,6 +93,9 @@
                       </p>
                   </div>
                   <div class="bg-gray-100 p-20">
+                    {%- if section.settings.image_3 != blank -%}
+                      {{ section.settings.image_3 | image_url: width: third_img_width, height: third_img_height | image_tag: loading: 'lazy', alt: section.settings.image_3.alt | escape }}
+                    {%- endif -%}
                       <!-- <img src="assets/img/camera-img.png" alt=""> -->
                   </div>
               </div>
@@ -219,14 +221,32 @@
           "type" : "image_picker",
           "id" : "image",
           "label" : "t:sections.product-landing-page.settings.image.label"
-
         },
         {
           "type" : "image_picker",
           "id" : "image_2",
           "label" : "t:sections.product-landing-page.settings.image_2.label"
-
-        }   
+        },
+        {
+          "type" : "image_picker",
+          "id" : "image_3",
+          "label" : "t:sections.product-landing-page.settings.image_3.label"
+        },
+        {
+          "type" : "image_picker",
+          "id" : "image_4",
+          "label" : "t:sections.product-landing-page.settings.image_4.label"
+        },
+        {
+          "type" : "image_picker",
+          "id" : "image_5",
+          "label" : "t:sections.product-landing-page.settings.image_5.label"
+        },
+        {
+          "type" : "image_picker",
+          "id" : "image_6",
+          "label" : "t:sections.product-landing-page.settings.image_6.label"
+        }      
       ],
       "templates": ["index", "page"],
       "presets" : [
