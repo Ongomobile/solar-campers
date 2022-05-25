@@ -497,6 +497,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.tw-mb-28 {
+  margin-bottom: 7rem;
+}
+
 .tw-mb-16 {
   margin-bottom: 4rem;
 }
@@ -511,10 +515,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-mb-6 {
   margin-bottom: 1.5rem;
-}
-
-.tw-mb-28 {
-  margin-bottom: 7rem;
 }
 
 .tw-inline-block {
@@ -667,11 +667,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.tw-bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
 .tw-p-20 {
   padding: 5rem;
 }
@@ -728,13 +723,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.tw-font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .tw-text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.tw-text-5xl {
-  font-size: 3rem;
+.tw-text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -778,6 +777,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-font-medium {
   font-weight: 500;
+}
+
+.tw-text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .tw-text-gray-600 {
@@ -864,22 +868,26 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 
-  .md\:tw-space-x-20 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(5rem * var(--tw-space-x-reverse));
-    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .md\:tw-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
+  .md\:tw-space-x-20 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:tw-space-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:tw-text-left {
+    text-align: left;
   }
 }
 
@@ -968,3 +976,5 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-align: center;
   }
 }
+
+

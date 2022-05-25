@@ -11,11 +11,6 @@ module.exports = {
     screens: {
       md: '750px',
       lg: '990px'
-    },
-    extend: {
-      fontFamily: {
-        heading: 'var(--font-heading-family)'
-      }
     }
   },
   plugins: []
