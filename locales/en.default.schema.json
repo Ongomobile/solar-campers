@@ -1247,6 +1247,14 @@
         "name": "Image with text"
       }
     },
+    "product-landing-page":{
+      "name": "Product Landing Page",
+      "settings": {
+        "image": {
+          "label" :"Hero image"
+        }
+      }
+    },
     "main-article": {
       "name": "Blog post",
       "blocks": {
