@@ -7,9 +7,16 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "16534538681c5e65d0": {
+      "type": "product-landing-page",
+      "settings": {
+        "product_landing_page": "shopify:\/\/shop_images\/pexels-andrea-piacquadio-3777017.jpg"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16534538681c5e65d0"
   ]
 }
