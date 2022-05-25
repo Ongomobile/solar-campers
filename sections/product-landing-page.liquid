@@ -8,11 +8,12 @@
                         <p class="sm:w-3/4 lg:w-2/4 xl:w-96 mx-auto text-lg sm:text-xl text-gray-600">Free HTML Single Product eCommerce langing page template</p>
                     </div>
                     {%- if section.settings.image != blank -%}
-                      
+                    {{section.settings.image |image_url: width: 900 | image_tag: loading: 'lazy'}}
+                      <!-- <img class="mx-auto xl:max-w-screen-lg mb-28" src="" alt="Drone"> -->
                     {%- endif -%}
                     <a href="#0" class="px-12 py-4 bg-blue-800 hover:bg-blue-900 transition duration-300 ease-in-out shadow hover:shadow-lg transform hover:scale-110 text-white font-semibold text-lg rounded-full inline-block">Buy now</a>
                 </div>
-                <!-- <img class="mx-auto xl:max-w-screen-lg mb-28" src="assets/img/hero-drone.png" alt="Drone"> -->
+                
                 <div class="space-y-12">
                     <p class="lg:w-3/5 mx-auto text-xl sm:text-3xl font-semibold text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet obcaecati perferendis voluptas quasi quidem natus error voluptatibus.</p>
                     <div class="flex flex-col sm:flex-row justify-center space-y-5 sm:space-y-0 sm:space-x-10 md:space-x-20">
