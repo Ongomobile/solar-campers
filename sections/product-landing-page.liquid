@@ -1,3 +1,6 @@
+{%-liquid
+  assign hero_img_class = "mx-auto xl:max-w-screen-lg mb-28" 
+-%}
 <div class="page-width-desktop">
         <section class="bg-gray-200 py-20 lg:py-28"><!-- Start Hero Block -->
             <div class="container mx-auto px-5 text-center">
@@ -8,7 +11,9 @@
                         <p class="sm:w-3/4 lg:w-2/4 xl:w-96 mx-auto text-lg sm:text-xl text-gray-600">Free HTML Single Product eCommerce langing page template</p>
                     </div>
                     {%- if section.settings.image != blank -%}
-                    {{section.settings.image |image_url: width: 900 | image_tag: loading: 'lazy'}}
+                   
+                      {{ section.settings.image | image_url: width: section.settings.image.width, height: section.settings.image.height | image_tag: loading: 'lazy', class: hero_img_class, alt: section.settings.image.alt | escape }}
+                    
                       <!-- <img class="mx-auto xl:max-w-screen-lg mb-28" src="" alt="Drone"> -->
                     {%- endif -%}
                     <a href="#0" class="px-12 py-4 bg-blue-800 hover:bg-blue-900 transition duration-300 ease-in-out shadow hover:shadow-lg transform hover:scale-110 text-white font-semibold text-lg rounded-full inline-block">Buy now</a>
